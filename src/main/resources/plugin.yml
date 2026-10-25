@@ -1,0 +1,26 @@
+name: SimpleKits
+main: dev.kits.KitsPlugin
+version: 1.0.0
+api-version: '26.2'
+description: Free kit menu. Everyone can claim, only OPs can edit.
+commands:
+  kit:
+    description: Open the kit menu or claim a kit
+    usage: /kit [name]
+    aliases: [kits]
+    permission: kits.use
+  kitadmin:
+    description: Manage kits (OP only)
+    usage: /kitadmin <create|edit|delete|icon|cooldown|list|reset|reload>
+    aliases: [kitedit]
+    permission: kits.admin
+permissions:
+  kits.use:
+    description: Open the kit menu and claim kits
+    default: true
+  kits.admin:
+    description: Create, edit and delete kits
+    default: op
+  kits.bypass:
+    description: Ignore kit cooldowns
+    default: false
